@@ -28,6 +28,11 @@ function Todo() {
                 ></input>
                 <button>Add Todo!</button>
             </form>
+            <ul>
+                {todoList.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
         </div>
     );
 }
