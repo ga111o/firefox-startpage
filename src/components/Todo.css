@@ -1,0 +1,69 @@
+body {
+    background-image: url(./large.png);
+}
+
+@keyframes flyRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#Todo {
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: rgba(100, 100, 100, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#todoForm {
+    /* margin-bottom: 20px; */
+}
+
+#todoInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: 0.2s;
+}
+
+#todoInput:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: 0.2s;
+    outline: none;
+}
+#todoInput:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+    outline: none;
+}
+
+#todoUl {
+    list-style: none;
+    padding: 0;
+}
+
+#todoLi {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 0.2s;
+    animation: flyRightToLeft 0.5s ease forwards;
+}
+
+#todoLi:hover {
+    background-color: rgba(150, 150, 150, 0.3);
+    transition: 0.2s;
+}

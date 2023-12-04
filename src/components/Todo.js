@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Todo.css";
 
 function Todo() {
     const [todoValue, setTodoValue] = useState("");
@@ -34,16 +35,21 @@ function Todo() {
 
     return (
         <div id="Todo">
-            <form onSubmit={ifUserSubmitTodo}>
+            <form id="todoForm" onSubmit={ifUserSubmitTodo}>
                 <input
+                    id="todoInput"
                     placeholder="Input Todo!"
                     onChange={ifUserTypeTodo}
                     value={todoValue}
                 ></input>
             </form>
-            <ul>
+            <ul id="todoUl">
                 {todoList.map((item, index) => (
-                    <li key={index} onClick={() => DeleteTodo(index)}>
+                    <li
+                        id="todoLi"
+                        key={index}
+                        onClick={() => DeleteTodo(index)}
+                    >
                         {item}
                     </li>
                 ))}
