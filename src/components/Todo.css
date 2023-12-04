@@ -1,18 +1,3 @@
-body {
-    background-image: url(./large.png);
-}
-
-@keyframes flyRightToLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 #Todo {
     max-width: 300px;
     margin: 20px auto;
@@ -21,10 +6,12 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
 }
 
 #todoForm {
     /* margin-bottom: 20px; */
+    transition: 0.2s;
 }
 
 #todoInput {
@@ -66,4 +53,15 @@ body {
 #todoLi:hover {
     background-color: rgba(150, 150, 150, 0.3);
     transition: 0.2s;
+}
+
+@keyframes flyRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
