@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Todo() {
     const [todoValue, setTodoValue] = useState("");
@@ -6,7 +6,15 @@ function Todo() {
         setTodoValue(event.target.value);
     };
 
-    const [todoList, setTodoList] = useState([]);
+    const [todoList, setTodoList] = useState(() => {
+        const storedTodoList = window.localStorage.getItem("todoList");
+        return storedTodoList ? JSON.parse(storedTodoList) : [];
+    });
+
+    useEffect(() => {
+        window.localStorage.setItem("todoList", JSON.stringify(todoList));
+    }, [todoList]);
+
     const ifUserSubmitTodo = (event) => {
         event.preventDefault();
         if (todoValue === "") {
@@ -14,8 +22,14 @@ function Todo() {
         } else {
             setTodoList((currentArray) => [todoValue, ...currentArray]);
             setTodoValue("");
-            console.log(todoList);
         }
+    };
+
+    const DeleteTodo = (index) => {
+        setTodoList((currentArray) => [
+            ...currentArray.slice(0, index),
+            ...currentArray.slice(index + 1),
+        ]);
     };
 
     return (
@@ -26,11 +40,12 @@ function Todo() {
                     onChange={ifUserTypeTodo}
                     value={todoValue}
                 ></input>
-                <button>Add Todo!</button>
             </form>
             <ul>
                 {todoList.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index} onClick={() => DeleteTodo(index)}>
+                        {item}
+                    </li>
                 ))}
             </ul>
         </div>
