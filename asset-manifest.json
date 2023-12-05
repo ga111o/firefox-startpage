@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FireFox-StartPage/static/css/main.f31f848b.css",
-    "main.js": "/FireFox-StartPage/static/js/main.64785fe8.js",
+    "main.css": "/FireFox-StartPage/static/css/main.8835360b.css",
+    "main.js": "/FireFox-StartPage/static/js/main.b896baaf.js",
     "static/js/787.84e24aa9.chunk.js": "/FireFox-StartPage/static/js/787.84e24aa9.chunk.js",
     "static/media/bg.png": "/FireFox-StartPage/static/media/bg.e05de365076240f3d294.png",
     "index.html": "/FireFox-StartPage/index.html",
-    "main.f31f848b.css.map": "/FireFox-StartPage/static/css/main.f31f848b.css.map",
-    "main.64785fe8.js.map": "/FireFox-StartPage/static/js/main.64785fe8.js.map",
+    "main.8835360b.css.map": "/FireFox-StartPage/static/css/main.8835360b.css.map",
+    "main.b896baaf.js.map": "/FireFox-StartPage/static/js/main.b896baaf.js.map",
     "787.84e24aa9.chunk.js.map": "/FireFox-StartPage/static/js/787.84e24aa9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f31f848b.css",
-    "static/js/main.64785fe8.js"
+    "static/css/main.8835360b.css",
+    "static/js/main.b896baaf.js"
   ]
 }
