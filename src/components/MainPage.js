@@ -1,10 +1,10 @@
-import { useState } from "react";
 import Todo from "./Todo";
+import Title from "./Title";
 
 function MainPage() {
     return (
         <div>
-            <h1>this is main page!</h1>
+            <Title />
             <Todo />
         </div>
     );
