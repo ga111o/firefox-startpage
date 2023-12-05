@@ -1,5 +1,6 @@
 import Todo from "./Todo";
 import Title from "./Title";
+import ShortCut from "./ShortCut";
 
 import "./MainPage.css";
 
@@ -8,7 +9,7 @@ function MainPage() {
         <div>
             <Title />
             <div id="container">
-                <h1>test</h1>
+                <ShortCut />
                 <Todo />
             </div>
         </div>
