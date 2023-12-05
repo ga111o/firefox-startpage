@@ -3,6 +3,7 @@ body {
     background-size: cover, contain;
     height: 100vh;
     /* backdrop-filter: blur(3px); */
+    overflow: hidden;
 }
 
 #container {

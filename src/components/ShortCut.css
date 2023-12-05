@@ -20,6 +20,23 @@
     height: 155px;
     width: 145px;
 }
+#editInput {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 145px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: 0.2s;
+    font-size: 16px;
+}
+
+#editInput:focus {
+    outline: none;
+    width: 135px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
 #shortCutInput:hover {
     outline: none;
     background-color: rgba(255, 255, 255, 0.15);
@@ -47,7 +64,7 @@
 }
 
 #shortCutContainer {
-    margin: 0 0 0 0;
+    margin: 0 0 0 30px;
 }
 #shortCutListContainer {
     width: 1000px;

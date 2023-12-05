@@ -1,40 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ShortCut.css";
 
 function ShortCut() {
     const [shortCutLink, setShortCutLink] = useState("");
     const [storedLinks, setStoredLinks] = useState([]);
     const [linkTitles, setLinkTitles] = useState([]);
-
-    useEffect(() => {
-        const fetchLinkTitles = async () => {
-            const updatedLinkTitles = [];
-            for (const link of storedLinks) {
-                try {
-                    const response = await fetch(link);
-                    const data = await response.text();
-                    const parser = new DOMParser();
-                    const htmlDocument = parser.parseFromString(
-                        data,
-                        "text/html"
-                    );
-                    const titleElement = htmlDocument.querySelector("title");
-                    const title = titleElement ? titleElement.innerText : "";
-                    updatedLinkTitles.push(title);
-                } catch (error) {
-                    console.error(
-                        "링크를 가져오는 중 오류가 발생했습니다:",
-                        error
-                    );
-                    const displayedLink = link.split("/")[2]; // 두 번째 슬래시 이후부터 첫 번째 점 사이의 문자열 대신 "github.com" 사용
-                    updatedLinkTitles.push(displayedLink); // 오류 발생 시 수정된 링크를 추가
-                }
-            }
-            setLinkTitles(updatedLinkTitles);
-        };
-
-        fetchLinkTitles();
-    }, [storedLinks]);
+    const inputRef = useRef(null);
 
     const onChange = (event) => {
         setShortCutLink(event.target.value);
@@ -59,6 +30,13 @@ function ShortCut() {
         setStoredLinks(updatedLinks);
     };
 
+    const onEdit = (index, newTitle) => {
+        const updatedLinkTitles = [...linkTitles];
+        updatedLinkTitles[index] = newTitle;
+        setLinkTitles(updatedLinkTitles);
+        localStorage.setItem("linkTitles", JSON.stringify(updatedLinkTitles));
+    };
+
     useEffect(() => {
         const linksFromStorage = JSON.parse(
             localStorage.getItem("shortCutLinks")
@@ -66,10 +44,21 @@ function ShortCut() {
         if (linksFromStorage) {
             setStoredLinks(linksFromStorage);
         }
-    }, []);
+    }, [storedLinks]);
 
-    const handleLinkClick = (url) => {
-        window.open(url, "_blank");
+    useEffect(() => {
+        const linkTitlesFromStorage = JSON.parse(
+            localStorage.getItem("linkTitles")
+        );
+        if (linkTitlesFromStorage) {
+            setLinkTitles(linkTitlesFromStorage);
+        }
+    }, [linkTitles]);
+
+    const handleLinkClick = (event, url) => {
+        if (event.target !== inputRef.current) {
+            window.open(url, "_blank");
+        }
     };
 
     return (
@@ -79,10 +68,15 @@ function ShortCut() {
                     <div
                         key={index}
                         id="shortCutList"
-                        onClick={() => handleLinkClick(link)}
+                        onClick={(event) => handleLinkClick(event, link)}
                     >
-                        <h2 id="shortCutLink">{linkTitles[index] || link}</h2>
-
+                        <input
+                            id="editInput"
+                            type="text"
+                            value={linkTitles[index]}
+                            onChange={(e) => onEdit(index, e.target.value)}
+                            ref={inputRef}
+                        />
                         <button onClick={() => onDelete(index)}>
                             <b>Delete</b>
                         </button>
