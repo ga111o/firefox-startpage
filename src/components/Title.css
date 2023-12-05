@@ -1,3 +1,42 @@
-#Title {
-    font
+#time {
+    font-size: 100px;
+    color: rgba(255, 226, 226, 0.7); /* Solid color for clear text */
+    position: relative; /* Establish relative positioning */
+    background-clip: padding-box; /* Ensures the background extends only to the padding edge */
+    padding: 10px; /* Add some padding to create space for the blurry background */
+    display: inline; /* Align the block more tightly around the text */
+    border: 2px solid rgba(255, 226, 226, 0.7); /* Your specific text border */
+    border-radius: 10px; /* Optional: if you want rounded edges */
+    transition: 0.2s;
+}
+
+#time:hover {
+    font-size: 105px;
+    color: rgba(255, 226, 226, 0.9);
+    transition: 0.2s;
+}
+
+#time::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: -10px; /* Same as padding to extend background edge */
+    backdrop-filter: blur(10px); /* Blurry effect for the background */
+    border-radius: 10px; /* Optional: if you want rounded edges */
+}
+
+#time::after {
+    content: "";
+    position: absolute;
+    top: -2px; /* Adjust to the size of your border */
+    left: -2px; /* Adjust to the size of your border */
+    right: -2px; /* Adjust to the size of your border */
+    bottom: -2px; /* Adjust to the size of your border */
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 10px; /* Optional: if you want rounded edges */
 }
