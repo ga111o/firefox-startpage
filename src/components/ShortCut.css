@@ -1,3 +1,146 @@
+#shortCutInput {
+    width: 300px;
+    margin: 30px 0 30px 0;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    animation: flyLeft2Right 0.3s ease forwards;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 15px;
+    padding-inline-start: 10px;
+    transition: 0.2s;
+}
+#shortCutInput:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.2s;
+    margin-top: -2.5px;
+    margin-left: -2.5px;
+    height: 155px;
+    width: 145px;
+}
+#shortCutInput:hover {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.2s;
+    margin-top: -2.5px;
+    margin-left: -2.5px;
+    height: 155px;
+    width: 145px;
+}
+
+#shortCutContainer form {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+#shortCutContainer form input {
+    width: 140px;
+    height: 150px;
+    margin: 0 0 0 0;
+    border: 0;
+    padding: 0;
+    float: left;
+    padding-inline-start: 10px;
+}
+
 #shortCutContainer {
     margin: 0 0 0 0;
+}
+#shortCutListContainer {
+    width: 1000px;
+    margin: 0;
+}
+#shortCutList {
+    width: 150px;
+    height: 150px;
+    margin: 5px 5px 5px 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    float: left;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    transition: 0.2s;
+}
+#shortCutList:hover {
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    height: 155px;
+    width: 155px;
+    transition: 0.2s;
+}
+#shortCutList button {
+    display: block;
+    position: absolute;
+    left: 60%;
+    top: 80%;
+    animation: fadeOut 0.2s ease forwards;
+
+    border-radius: 1px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background: var(--button-bg-color);
+    color: var(--button-color);
+
+    color: rgba(255, 130, 130, 0.747);
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 4px;
+
+    display: inline-block;
+    width: auto;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+#shortCutList:hover button {
+    display: block;
+    animation: flyRightToLeft 0.2s ease forwards;
+}
+
+#shortCutLink {
+    font-size: 16px;
+    margin: 10px 10px 10px 10px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes flyRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes flyLeft2Right {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
