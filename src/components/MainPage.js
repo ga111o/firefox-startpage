@@ -7,7 +7,10 @@ function MainPage() {
     return (
         <div>
             <Title />
-            <Todo />
+            <div id="container">
+                <h1>test</h1>
+                <Todo />
+            </div>
         </div>
     );
 }
