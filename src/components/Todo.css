@@ -45,7 +45,6 @@
     padding: 10px;
     border-bottom: 1px solid #eee;
     cursor: pointer;
-    backdrop-filter: blur(10px);
     transition: 0.2s;
     animation: flyRightToLeft 0.5s ease forwards;
 }

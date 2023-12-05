@@ -63,22 +63,25 @@ function Title() {
 
     return (
         <div>
-            {isInputVisible ? (
-                <input
-                    type="text"
-                    placeholder="Enter your name"
-                    value={name}
-                    onChange={handleInputChange}
-                    onKeyPress={handleEnterKeyPress}
-                    autoFocus
-                />
-            ) : (
-                <h1 id="Title" onClick={handleUsernameClick}>
-                    WELCOME! {name}
-                </h1>
-            )}
-            <h1 id="time">{formattedTime}</h1>
-            <p id="date">{formattedDate}</p>
+            <div className="titleContainer">
+                {isInputVisible ? (
+                    <input
+                        id="nameInput"
+                        type="text"
+                        placeholder="Type Your Name!"
+                        value={name}
+                        onChange={handleInputChange}
+                        onKeyPress={handleEnterKeyPress}
+                        autoFocus
+                    />
+                ) : (
+                    <h1 id="Title" onClick={handleUsernameClick}>
+                        WELCOME! {name}
+                    </h1>
+                )}
+                <h1 id="time">{formattedTime}</h1>
+                <h2 id="date">{formattedDate}</h2>
+            </div>
         </div>
     );
 }

@@ -1,3 +1,43 @@
+.titleContainer {
+    width: 600px;
+    margin: 0 auto; /* This will center your container */
+    text-align: center; /* This centers the text inside the #Title element */
+}
+#nameInput {
+    width: 300px;
+    margin: 30px 0 30px 0;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 226, 226, 0.3);
+    backdrop-filter: blur(10px);
+    animation: flyTopToBottom 0.3s ease forwards;
+    color: white;
+    font-size: 15px;
+}
+
+#date {
+    font-size: 35px;
+    transition: 0.2s;
+    width: 600px;
+    text-align: center;
+    color: rgba(255, 226, 226, 0.5);
+    margin: -15px 0 0 0;
+}
+
+#Title {
+    font-size: 35px;
+    transition: 0.2s;
+    width: 600px;
+    text-align: center;
+    color: rgba(255, 226, 226, 0.5);
+}
+
+#Title:hover {
+    font-size: 34px;
+    transition: 0.2s;
+    color: rgba(255, 226, 226, 0.9);
+}
+
 #time {
     font-size: 100px;
     color: rgba(255, 226, 226, 0.7); /* Solid color for clear text */
@@ -8,6 +48,7 @@
     border: 2px solid rgba(255, 226, 226, 0.7); /* Your specific text border */
     border-radius: 10px; /* Optional: if you want rounded edges */
     transition: 0.2s;
+    padding-bottom: 40px;
 }
 
 #time:hover {
@@ -39,4 +80,15 @@
     pointer-events: none;
     z-index: 1;
     border-radius: 10px; /* Optional: if you want rounded edges */
+}
+
+@keyframes flyTopToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
