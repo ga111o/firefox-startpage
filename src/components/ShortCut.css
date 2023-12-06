@@ -10,6 +10,7 @@
     font-size: 15px;
     padding-inline-start: 10px;
     transition: 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 #shortCutInput:focus {
     outline: none;
@@ -19,6 +20,7 @@
     margin-left: -2.5px;
     height: 155px;
     width: 145px;
+    box-shadow: 1px 6px 13px rgba(0, 0, 0, 0.5);
 }
 #editInput {
     background-color: rgba(0, 0, 0, 0);
@@ -45,6 +47,7 @@
     margin-left: -2.5px;
     height: 155px;
     width: 145px;
+    box-shadow: 1px 6px 13px rgba(0, 0, 0, 0.5);
 }
 
 #shortCutContainer form {
@@ -81,6 +84,7 @@
     align-items: center;
     display: flex;
     transition: 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 #shortCutList:hover {
     margin-top: 2.5px;
@@ -88,6 +92,7 @@
     height: 155px;
     width: 155px;
     transition: 0.2s;
+    box-shadow: 1px 6px 13px rgba(0, 0, 0, 0.5);
 }
 #shortCutList button {
     display: block;
