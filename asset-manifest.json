@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FireFox-StartPage/static/css/main.8835360b.css",
+    "main.css": "/FireFox-StartPage/static/css/main.07641415.css",
     "main.js": "/FireFox-StartPage/static/js/main.b896baaf.js",
     "static/js/787.84e24aa9.chunk.js": "/FireFox-StartPage/static/js/787.84e24aa9.chunk.js",
     "static/media/bg.png": "/FireFox-StartPage/static/media/bg.e05de365076240f3d294.png",
     "index.html": "/FireFox-StartPage/index.html",
-    "main.8835360b.css.map": "/FireFox-StartPage/static/css/main.8835360b.css.map",
+    "main.07641415.css.map": "/FireFox-StartPage/static/css/main.07641415.css.map",
     "main.b896baaf.js.map": "/FireFox-StartPage/static/js/main.b896baaf.js.map",
     "787.84e24aa9.chunk.js.map": "/FireFox-StartPage/static/js/787.84e24aa9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8835360b.css",
+    "static/css/main.07641415.css",
     "static/js/main.b896baaf.js"
   ]
 }
