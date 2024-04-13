@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/FireFox-StartPage/static/css/main.07641415.css",
-    "main.js": "/FireFox-StartPage/static/js/main.b896baaf.js",
-    "static/js/787.84e24aa9.chunk.js": "/FireFox-StartPage/static/js/787.84e24aa9.chunk.js",
-    "static/media/bg.png": "/FireFox-StartPage/static/media/bg.e05de365076240f3d294.png",
-    "index.html": "/FireFox-StartPage/index.html",
-    "main.07641415.css.map": "/FireFox-StartPage/static/css/main.07641415.css.map",
-    "main.b896baaf.js.map": "/FireFox-StartPage/static/js/main.b896baaf.js.map",
-    "787.84e24aa9.chunk.js.map": "/FireFox-StartPage/static/js/787.84e24aa9.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.07641415.css",
-    "static/js/main.b896baaf.js"
-  ]
+    "main.css": "/firefox-startpage/static/css/main.cf947e05.chunk.css",
+    "main.js": "/firefox-startpage/static/js/main.d3c693bd.chunk.js",
+    "main.js.map": "/firefox-startpage/static/js/main.d3c693bd.chunk.js.map",
+    "runtime~main.js": "/firefox-startpage/static/js/runtime~main.22d5f54a.js",
+    "runtime~main.js.map": "/firefox-startpage/static/js/runtime~main.22d5f54a.js.map",
+    "static/js/2.a2b181a3.chunk.js": "/firefox-startpage/static/js/2.a2b181a3.chunk.js",
+    "static/js/2.a2b181a3.chunk.js.map": "/firefox-startpage/static/js/2.a2b181a3.chunk.js.map",
+    "static/js/3.177faaa1.chunk.js": "/firefox-startpage/static/js/3.177faaa1.chunk.js",
+    "static/js/3.177faaa1.chunk.js.map": "/firefox-startpage/static/js/3.177faaa1.chunk.js.map",
+    "index.html": "/firefox-startpage/index.html",
+    "precache-manifest.631b5edb3bf8d9625931085341186a60.js": "/firefox-startpage/precache-manifest.631b5edb3bf8d9625931085341186a60.js",
+    "service-worker.js": "/firefox-startpage/service-worker.js",
+    "static/css/main.cf947e05.chunk.css.map": "/firefox-startpage/static/css/main.cf947e05.chunk.css.map",
+    "static/media/MainPage.css": "/firefox-startpage/static/media/bg.fc04cecc.png"
+  }
 }
